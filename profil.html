@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Profil Sekolah — Al-Yusdah</title>
+  <meta name="description" content="Profil dan Sejarah SD & SMP Terpadu Al-Yusdah.">
+  <meta name="theme-color" content="#007F3C">
+  <link rel="icon" href="gambar/favicon.png">
+
+  <!-- Font & Bootstrap -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Poppins:wght@600;700&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Style kustom -->
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+  <!-- ============ NAVBAR ============ -->
+  <header class="site-header-static border-bottom shadow-sm">
+    <nav class="navbar navbar-expand-lg navbar-custom">
+      <div class="container">
+        <a class="navbar-brand d-flex align-items-center gap-2 fw-bold" href="index.html">
+          <img src="gambar/logo-alyusdah.png" alt="Logo Al-Yusdah" width="53" height="48">
+          <span class="lh-sm span-custom">Al-Yusdah<small class="d-block fw-medium brand-sub">SD &amp; SMP Terpadu</small></span>
+        </a>
+
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu" aria-controls="navMenu" aria-expanded="false" aria-label="Buka menu">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navMenu">
+          <ul class="navbar-nav ms-auto align-items-lg-center gap-lg-1 pt-3 pt-lg-0">
+            <li class="nav-item"><a class="nav-link" href="index.html">Beranda</a></li>
+            
+            <!-- Dropdown Menu Profile -->
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="profileDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                Profile
+              </a>
+              <ul class="dropdown-menu border-0 shadow-sm" aria-labelledby="profileDropdown">
+                <li><a class="dropdown-item" href="sambutan.html">Sambutan</a></li>
+                <li><a class="dropdown-item" href="profil.html">Profil Sekolah</a></li>
+                <li><a class="dropdown-item" href="guru.html">Guru &amp; Staf</a></li>
+                <li><a class="dropdown-item" href="#eskul">Ekstrakurikuler</a></li>
+              </ul>
+            </li>
+
+            <li class="nav-item"><a class="nav-link" href="berita.html">Berita</a></li>
+            <li class="nav-item"><a class="nav-link" href="galery.html">Galery</a></li>
+            <li class="nav-item"><a class="nav-link" href="kontak.html">Kontak</a></li>
+            <li class="nav-item ms-lg-2 mt-2 mt-lg-0 pb-3 pb-lg-0"><a class="btn btn-warning w-100" href="#daftar">Pendaftaran</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <main class="py-5 bg-light">
+    <div class="container">
+
+      <!-- ============ IDENTITAS SEKOLAH ============ -->
+      <section class="mb-5">
+        <div class="text-center mb-4">
+          <h2 class="fw-bold text-success">IDENTITAS SEKOLAH</h2>
+          <p class="text-secondary">Informasi umum dan profil singkat SD &amp; SMP Terpadu Al-Yusdah</p>
+        </div>
+
+        <div class="row row-cols-1 row-cols-md-2 g-4">
+          <!-- Identitas SD -->
+          <div class="col">
+            <div class="card h-100 border-0 shadow-sm rounded-4 overflow-hidden">
+              <div class="card-header bg-success text-white py-3 px-4 fw-bold d-flex align-items-center gap-2">
+                <span>🏫</span> SD Terpadu Al-Yusdah
+              </div>
+              <div class="card-body p-4">
+                <table class="table table-borderless mb-0 align-middle">
+                  <tbody>
+                    <tr>
+                      <th scope="row" class="text-secondary ps-0" style="width: 40%;">Nama Sekolah</th>
+                      <td class="fw-semibold">: SD Terpadu Al-Yusdah</td>
+                    </tr>
+                    <tr>
+                      <th scope="row" class="text-secondary ps-0">Jenjang</th>
+                      <td>: Sekolah Dasar (SD)</td>
+                    </tr>
+                    <tr>
+                      <th scope="row" class="text-secondary ps-0">Akreditasi</th>
+                      <td>: <span class="badge bg-success-subtle text-success px-3 py-1 rounded-pill">B</span></td>
+                    </tr>
+                    <tr>
+                      <th scope="row" class="text-secondary ps-0">Status Sekolah</th>
+                      <td>: Swasta (Sekolah Sosial)</td>
+                    </tr>
+                    <tr>
+                      <th scope="row" class="text-secondary ps-0">Biaya SPP</th>
+                      <td>: <span class="badge bg-warning-subtle text-dark px-3 py-1 rounded-pill fw-bold">Gratis (Rp 0,-)</span></td>
+                    </tr>
+                    <tr>
+                      <th scope="row" class="text-secondary ps-0">Alamat</th>
+                      <td>: Jl. Pendidikan No. 12, Medan, Sumatera Utara</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+
+          <!-- Identitas SMP -->
+          <div class="col">
+            <div class="card h-100 border-0 shadow-sm rounded-4 overflow-hidden">
+              <div class="card-header bg-success text-white py-3 px-4 fw-bold d-flex align-items-center gap-2">
+                <span>🏫</span> SMP Terpadu Al-Yusdah
+              </div>
+              <div class="card-body p-4">
+                <table class="table table-borderless mb-0 align-middle">
+                  <tbody>
+                    <tr>
+                      <th scope="row" class="text-secondary ps-0" style="width: 40%;">Nama Sekolah</th>
+                      <td class="fw-semibold">: SMP Terpadu Al-Yusdah</td>
+                    </tr>
+                    <tr>
+                      <th scope="row" class="text-secondary ps-0">Jenjang</th>
+                      <td>: Sekolah Menengah Pertama (SMP)</td>
+                    </tr>
+                    <tr>
+                      <th scope="row" class="text-secondary ps-0">Akreditasi</th>
+                      <td>: <span class="badge bg-success-subtle text-success px-3 py-1 rounded-pill">B</span></td>
+                    </tr>
+                    <tr>
+                      <th scope="row" class="text-secondary ps-0">Status Sekolah</th>
+                      <td>: Swasta (Sekolah Sosial)</td>
+                    </tr>
+                    <tr>
+                      <th scope="row" class="text-secondary ps-0">Biaya SPP</th>
+                      <td>: <span class="badge bg-warning-subtle text-dark px-3 py-1 rounded-pill fw-bold">Gratis (Rp 0,-)</span></td>
+                    </tr>
+                    <tr>
+                      <th scope="row" class="text-secondary ps-0">Alamat</th>
+                      <td>: Jl. Pendidikan No. 12, Medan, Sumatera Utara</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============ JEJAK LANGKAH & SEJARAH (TIMELINE) ============ -->
+      <section class="py-4">
+        <div class="sejarah">
+          <div class="text-center mb-5">
+            <h2 class="fw-bold text-dark">SEJARAH SINGKAT YAYASAN DAN SEKOLAH AL-YUSDAH</h2>
+            <p class="text-secondary">Jejak perjalanan dan komitmen sosial Sekolah Al-Yusdah dari masa ke masa.</p>
+          </div>
+
+          <div class="timeline-wrapper">
+            <!-- Garis Vertikal Tengah -->
+            <div class="timeline-main-line"></div>
+
+            <!-- Item 1 (Kiri) - Awal Berdiri / Mimpi Sederhana -->
+            <div class="timeline-row left">
+              <div class="timeline-dot-icon"></div>
+              <div class="timeline-box">
+                <span class="badge-year">Awal Mula</span>
+                <h4 class="timeline-title">Mimpi Akses Pendidikan</h4>
+                <p class="timeline-desc">
+                  Sekolah Al-Yusdah lahir dari sebuah mimpi sederhana, yaitu menghadirkan akses pendidikan yang layak dan terjangkau bagi anak-anak di lingkungan sekitar yang memiliki keterbatasan.
+                </p>
+              </div>
+            </div>
+
+            <!-- Item 2 (Kanan) - 17 Juli 2007 (SMK Perawatan) -->
+            <div class="timeline-row right">
+              <div class="timeline-dot-icon"></div>
+              <div class="timeline-box">
+                <span class="badge-year">17 Juli 2007</span>
+                <h4 class="timeline-title">Berdirinya SMK Perawatan</h4>
+                <p class="timeline-desc">
+                  Perjalanan ini dimulai dengan berdirinya lembaga pendidikan berbentuk SMK Perawatan. Dalam perjalanannya, lembaga tersebut mengalami dinamika hingga akhirnya berhenti beroperasi.
+                </p>
+              </div>
+            </div>
+
+            <!-- Item 3 (Kiri) - 2010–2013 (Perintisan SD & SMP) -->
+            <div class="timeline-row left">
+              <div class="timeline-dot-icon"></div>
+              <div class="timeline-box">
+                <span class="badge-year">2010 – 2013</span>
+                <h4 class="timeline-title">Perintisan SD &amp; SMP Al-Yusdah</h4>
+                <p class="timeline-desc">
+                  Semangat tidak pernah berhenti. Lembaga pendidikan SD dan SMP Al-Yusdah mulai dirintis kembali dari keterbatasan, berbekal keyakinan bahwa setiap anak berhak untuk belajar dan berkembang.
+                </p>
+              </div>
+            </div>
+
+            <!-- Item 4 (Kanan) - Gotong Royong & Pengembangan -->
+            <div class="timeline-row right">
+              <div class="timeline-dot-icon"></div>
+              <div class="timeline-box">
+                <span class="badge-year">Pembangunan Bertahap</span>
+                <h4 class="timeline-title">Semangat Gotong Royong</h4>
+                <p class="timeline-desc">
+                  Dengan ruang dan sarana yang sangat sederhana, yayasan bersama masyarakat, guru, tokoh lokal, serta pemerintah daerah bahu-membahu membangun sekolah secara bertahap.
+                </p>
+              </div>
+            </div>
+
+            <!-- Item 5 (Kiri) - Sekolah Sosial Sejak Awal -->
+            <div class="timeline-row left">
+              <div class="timeline-dot-icon"></div>
+              <div class="timeline-box">
+                <span class="badge-year">Prinsip Utama</span>
+                <h4 class="timeline-title">Komitmen Sekolah Sosial</h4>
+                <p class="timeline-desc">
+                  Al-Yusdah hadir membuka kesempatan bagi berbagai latar belakang sosial-ekonomi. Sejak awal berdiri hingga kini, <strong>Sekolah Al-Yusdah tidak memungut uang SPP (Gratis)</strong> dari peserta didik.
+                </p>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </section>
+
+    </div>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="bg-brand-dark text-white pt-5 pb-3">
+    <div class="container">
+      <div class="border-top border-light border-opacity-25 pt-3 text-center small opacity-75">
+        © <span id="year">2026</span> Sekolah Terpadu Al-Yusdah. All rights reserved.
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="js/script.js"></script>
+</body>
+</html>

@@ -1,0 +1,943 @@
+/* =====================================================================
+   STYLE.CSS : Penyesuaian Elemen & Tema Sekolah Al-Yusdah
+   ===================================================================== */
+
+/* ---------- 1. VARIABEL WARNA & TEMA ---------- */
+:root {
+  --bs-primary: #007F3C;
+  --bs-primary-rgb: 0, 127, 60;
+  --bs-primary-bg-subtle: #E6F6EC;
+  --bs-primary-border-subtle: #B5E3C8;
+  --bs-primary-text-emphasis: #00502A;
+
+  --bs-warning: #FFE600;
+  --bs-warning-rgb: 255, 230, 0;
+
+  --bs-secondary: #4A5D50;
+  --bs-secondary-rgb: 74, 93, 80;
+
+  --bs-link-color: #007F3C;
+  --bs-link-color-rgb: 0, 127, 60;
+  --bs-link-hover-color: #00502A;
+  --bs-link-hover-color-rgb: 0, 80, 42;
+
+  --bs-body-font-family: Inter, system-ui, -apple-system, sans-serif;
+  --bs-body-font-size: 0.95rem;
+  --bs-body-color: #0F1F15;
+  --bs-body-color-rgb: 15, 31, 21;
+  --bs-border-color: #D3E8DB;
+
+  --brand-dark: #00502A;
+  --mint: #E6F6EC;
+  --sage: #B5E3C8;
+  --soft: #F3FAF6;
+}
+
+/* ---------- 2. PENGATURAN DASAR ---------- */
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 80px;
+}
+
+body {
+  overflow-x: hidden;
+}
+
+h1, h2, h3, h4, h5, h6, 
+.btn, 
+.navbar-brand {
+  font-family: Poppins, system-ui, sans-serif;
+}
+
+.bg-soft {
+  background-color: var(--soft);
+}
+
+.bg-brand-dark {
+  background-color: var(--brand-dark);
+}
+
+.cv-auto {
+  content-visibility: auto;
+  contain-intrinsic-size: auto 600px;
+}
+
+/* Judul Bagian */
+.sec-title {
+  color: var(--bs-primary);
+  font-weight: 700;
+  font-size: clamp(1.4rem, 2.5vw, 1.85rem);
+  position: relative;
+  padding-bottom: 0.85rem;
+  margin-bottom: 0.75rem;
+}
+
+.sec-title::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 48px;
+  height: 4px;
+  border-radius: 2px;
+  background: var(--bs-warning);
+}
+
+.text-center .sec-title::after {
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+/* ---------- 3. TOMBOL ---------- */
+.btn {
+  border-radius: 0.75rem;
+  font-weight: 600;
+  min-height: 44px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.btn-sm {
+  min-height: 36px;
+}
+
+.btn-primary {
+  --bs-btn-bg: #007F3C;
+  --bs-btn-border-color: #007F3C;
+  --bs-btn-hover-bg: #00502A;
+  --bs-btn-hover-border-color: #00502A;
+  --bs-btn-active-bg: #00502A;
+  --bs-btn-active-border-color: #00502A;
+  --bs-btn-disabled-bg: #007F3C;
+  --bs-btn-disabled-border-color: #007F3C;
+}
+
+.btn-warning {
+  --bs-btn-color: #1A1A00;
+  --bs-btn-bg: #FFE600;
+  --bs-btn-border-color: #FFE600;
+  --bs-btn-hover-color: #1A1A00;
+  --bs-btn-hover-bg: #F2D800;
+  --bs-btn-hover-border-color: #F2D800;
+  --bs-btn-active-color: #1A1A00;
+  --bs-btn-active-bg: #E6CC00;
+  --bs-btn-active-border-color: #E6CC00;
+}
+
+.wa-float {
+  --bs-btn-bg: #128C4A;
+  --bs-btn-border-color: #128C4A;
+  --bs-btn-hover-bg: #0E7A40;
+  --bs-btn-hover-border-color: #0E7A40;
+  --bs-btn-hover-color: #fff;
+  z-index: 1030;
+  margin-bottom: max(1rem, env(safe-area-inset-bottom)) !important;
+}
+
+
+
+/* ---------- 4. HEADER & NAVBAR ---------- */
+.site-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1040;
+  transition: background 0.3s, box-shadow 0.3s;
+}
+
+.site-header .navbar-brand {
+  color: #fff;
+  font-size: 1.2rem;
+}
+
+.site-header .brand-sub {
+  color: #CDEBD8;
+  font-size: 0.72rem;
+}
+
+.site-header .nav-link {
+  color: #fff;
+  font-size: 0.9rem;
+  font-weight: 500;
+  border-radius: 0.5rem;
+}
+
+.site-header .nav-link:hover,
+.site-header .nav-link.active {
+  background: rgba(255, 255, 255, 0.18);
+  color: #fff;
+}
+
+.site-header .navbar-toggler {
+  border-color: rgba(255, 255, 255, 0.55);
+}
+
+.site-header .navbar-toggler-icon {
+  filter: invert(1);
+}
+
+.site-header .navbar-toggler:focus {
+  box-shadow: 0 0 0 0.2rem rgba(255, 230, 0, 0.4);
+}
+
+/* Header saat di-scroll (Solid White) */
+.site-header.solid {
+  background: rgba(255, 255, 255, 0.96);
+  box-shadow: 0 2px 14px rgba(0, 80, 42, 0.12);
+}
+
+.site-header.solid .navbar-brand {
+  color: var(--bs-primary);
+}
+
+.site-header.solid .brand-sub {
+  color: var(--bs-secondary);
+}
+
+.site-header.solid .nav-link {
+  color: var(--bs-body-color);
+}
+
+.site-header.solid .nav-link:hover,
+.site-header.solid .nav-link.active {
+  background: var(--mint);
+  color: var(--bs-primary);
+}
+
+.site-header.solid .navbar-toggler {
+  border-color: var(--bs-border-color);
+}
+
+.site-header.solid .navbar-toggler-icon {
+  filter: none;
+}
+
+/* Warna saat item dropdown diklik (Active) */
+.dropdown-item:active,
+.dropdown-item.active {
+  background-color: #007F3C !important; /* Ubah dengan warna latar pilihanmu */
+  color: #ffffff !important;           /* Ubah warna teksnya */
+}
+
+/* Warna saat kursor diarahkan ke item dropdown (Hover) */
+.dropdown-item:hover {
+  background-color: #e8f5e9 !important; /* Warna latar saat hover */
+  color: #007F3C !important;           /* Warna teks saat hover */
+}
+
+/* Warna tombol utama dropdown saat sedang terbuka/diklik */
+.dropdown-toggle.show {
+  color: #007F3C !important;
+}
+
+/* ---------- 5. HERO SECTION ---------- */
+.hero {
+  position: relative;
+  overflow: hidden;
+  padding: 140px 0 80px;
+  min-height: clamp(520px, 80vh, 680px);
+  background: linear-gradient(135deg, var(--brand-dark), var(--bs-primary));
+  border-bottom-left-radius: 200px;
+  margin-bottom: 18px;
+}
+
+.hero-bg {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+}
+
+.hero-bg img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 60%;
+  display: block;
+}
+
+.hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  background: linear-gradient(105deg, rgba(0, 80, 42, 0.82) 0%, rgba(0, 127, 60, 0.75) 100%);
+}
+
+.hero > .container {
+  z-index: 2;
+}
+
+.trust-badges {
+  color: #C5EBD3;
+}
+
+.trust-badges span::before {
+  content: "✓ ";
+  color: var(--bs-warning);
+  font-weight: 700;
+}
+
+.floating-badge {
+  position: absolute;
+  background: #fff;
+  color: var(--bs-body-color);
+  padding: 8px 16px;
+  border-radius: 999px;
+  font-weight: 600;
+  font-size: 0.82rem;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+  animation: melayang 6s ease-in-out infinite;
+}
+
+.fb-1 {
+  right: 3%;
+  top: 22%;
+}
+
+.fb-2 {
+  right: 12%;
+  bottom: 55%;
+  animation-delay: -3s;
+}
+
+@keyframes melayang {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-12px);
+  }
+}
+
+@media (max-width: 520px) {
+  .hero {
+    border-bottom-left-radius: 40px;
+  }
+}
+
+/* ---------- 6. KOMPONEN LAINNYA ---------- */
+/* Marquee */
+.marquee {
+  overflow: hidden;
+  background: var(--mint);
+  border-block: 1px solid var(--bs-border-color);
+  padding: 0.85rem 0;
+  user-select: none;
+}
+
+.marquee-track {
+  display: flex;
+  gap: 1rem;
+  width: max-content;
+  animation: jalan 30s linear infinite;
+  will-change: transform;
+}
+
+.marquee span {
+  background: #fff;
+  color: var(--bs-primary);
+  border: 1px solid var(--bs-border-color);
+  padding: 6px 18px;
+  border-radius: 999px;
+  font-weight: 600;
+  font-size: 0.88rem;
+  white-space: nowrap;
+}
+
+@keyframes jalan {
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+/* card berita */
+/* Styling Kustom Card Berita */
+.card-berita {
+  border-radius: 18px !important;
+  /* Border awal transparan atau abu-abu sangat tipis */
+  border: 1.5px solid rgba(0, 127, 60, 0.15) !important; 
+  overflow: hidden;
+  transition: all 0.3s ease-in-out;
+}
+
+/* Border berubah menjadi hijau pekat (warna utama) dan card naik saat kursor diarahkan */
+.card-berita:hover {
+  border-color: #007F3C !important; 
+  transform: translateY(-6px);
+  box-shadow: 0 12px 24px rgba(0, 127, 60, 0.15) !important;
+}
+
+.card-img-wrapper {
+  height: 200px;
+}
+
+.news-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.news-title {
+  line-height: 1.4;
+  font-size: 1.1rem;
+}
+
+.news-link {
+  transition: gap 0.2s ease;
+}
+
+.card-berita:hover .news-link {
+  gap: 8px !important;
+}
+
+
+/* Card & Icon */
+.card {
+  border-radius: 1rem;
+}
+
+.card-lift {
+  transition: transform 0.25s, box-shadow 0.25s;
+}
+
+.card-lift:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 14px 30px rgba(0, 80, 42, 0.13);
+}
+
+.icon-box {
+  width: 52px;
+  height: 52px;
+  border-radius: 0.85rem;
+  background: var(--mint);
+  display: grid;
+  place-items: center;
+  font-size: 1.6rem;
+}
+
+.thumb {
+  height: 140px;
+  background: linear-gradient(135deg, var(--mint), var(--sage));
+  display: grid;
+  place-items: center;
+  font-size: 2.8rem;
+  overflow: hidden;
+}
+
+.thumb img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Nav Pills */
+.nav-pills {
+  --bs-nav-link-color: var(--bs-primary);
+  --bs-nav-pills-link-active-bg: var(--bs-primary);
+  background: var(--mint);
+  border-radius: 0.9rem;
+  padding: 5px;
+  max-width: 460px;
+}
+
+.nav-pills .nav-link {
+  font-weight: 600;
+  border-radius: 0.6rem;
+  min-height: 44px;
+}
+
+/* Sambutan & Stats */
+.sambutan-foto {
+  max-width: 420px;
+}
+
+@media (min-width: 768px) {
+  .sambutan-foto {
+    max-width: none;
+  }
+}
+
+.stats-section {
+  background: linear-gradient(120deg, var(--brand-dark), var(--bs-primary));
+}
+
+.stat-num {
+  font-family: Poppins, sans-serif;
+  font-weight: 700;
+  font-size: clamp(1.8rem, 3.5vw, 2.5rem);
+  color: var(--bs-warning);
+}
+
+/* ---------- 7. SCROLLBAR HIJAU GRADASI TEBAL ---------- */
+::-webkit-scrollbar {
+  width: 18px;
+  height: 18px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--mint);
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(180deg, #00A651 0%, #007F3C 55%, #00502A 100%);
+  border-radius: 999px;
+  border: 3px solid var(--mint);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(180deg, #00C060 0%, #00903F 55%, #006A36 100%);
+}
+
+
+
+
+
+
+/* file sambutan */
+/* =====================================================================
+   STYLING DESAIN TIMELINE / JEJAK SEKOLAH
+   ===================================================================== */
+
+.span-custom{
+  color: #007F3C;
+}   
+
+/* Kontainer Utama Timeline */
+.timeline-wrapper {
+  position: relative;
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 20px 0;
+}
+
+/* Garis Tipis Vertikal di Tengah */
+.timeline-main-line {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  width: 2px;
+  background-color: #007F3C; /* Warna garis biru terang */
+  transform: translateX(-50%);
+}
+
+/* Baris Tiap Item Timeline */
+.timeline-row {
+  position: relative;
+  width: 50%;
+  margin-bottom: 40px;
+}
+
+.timeline-row.left {
+  left: 0;
+  padding-right: 45px;
+}
+
+.timeline-row.right {
+  left: 50%;
+  padding-left: 45px;
+}
+
+/* Titik Lingkaran di Garis Tengah */
+.timeline-dot-icon {
+  position: absolute;
+  top: 32px;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  background-color: #0f9e52; /* Biru utama */
+  border: 3px solid #ffffff;
+  box-shadow: 0 0 0 2px #04d867;
+  z-index: 2;
+}
+
+.timeline-row.left .timeline-dot-icon {
+  right: -9px;
+}
+
+.timeline-row.right .timeline-dot-icon {
+  left: -9px;
+}
+
+/* Kotak Kartu Timeline */
+.timeline-box {
+  background: #ffffff;
+  border: 1.5px solid #dbeafe; /* Border biru lembut */
+  border-radius: 20px; /* Sudut membulat halus */
+  padding: 28px 30px;
+  box-shadow: 0 4px 14px rgba(37, 99, 235, 0.03);
+  transition: all 0.3s ease;
+}
+
+.timeline-box:hover {
+  border-color: #04d867;
+  box-shadow: 0 8px 24px rgba(37, 99, 235, 0.08);
+}
+
+/* Badge Tahun Oval */
+.badge-year {
+  display: inline-block;
+  background-color: #016b32;
+  color: #ffffff;
+  font-weight: 700;
+  font-size: 0.85rem;
+  padding: 6px 18px;
+  border-radius: 50px;
+  margin-bottom: 16px;
+}
+
+/* Judul & Deskripsi Teks */
+.timeline-title {
+  font-size: 1.35rem;
+  font-weight: 700;
+  color: #0f172a;
+  margin-bottom: 12px;
+}
+
+.timeline-desc {
+  color: #64748b;
+  font-size: 0.95rem;
+  line-height: 1.6;
+  margin-bottom: 0;
+}
+
+
+/* Navbar Tetap/Selalu Muncul untuk Halaman Sub (seperti sambutan.html) */
+.site-header-static {
+  background-color: #ffffff;
+  position: sticky;
+  top: 0;
+  z-index: 1030;
+}
+
+.site-header-static .nav-link {
+  color: #333333 !important;
+  font-weight: 500;
+}
+
+.site-header-static .nav-link:hover,
+.site-header-static .nav-link.active {
+  color: #007F3C !important; /* Warna hijau khas Al-Yusdah */
+}
+
+.site-header-static .navbar-brand {
+  color: #111111 !important;
+}
+
+
+/* Responsif untuk Layar Ponsel/HP */
+@media (max-width: 767.98px) {
+  .timeline-main-line {
+    left: 20px;
+  }
+  .timeline-row {
+    width: 100%;
+    padding-left: 50px !important;
+    padding-right: 0 !important;
+  }
+  .timeline-row.right {
+    left: 0;
+  }
+  .timeline-row.left .timeline-dot-icon,
+  .timeline-row.right .timeline-dot-icon {
+    left: 11px;
+  }
+}
+
+
+
+
+
+/* Firefox Fallback */
+@supports not selector(::-webkit-scrollbar) {
+  html {
+    scrollbar-color: #007F3C #E6F6EC;
+    scrollbar-width: auto;
+  }
+}
+
+/* Accessibility: Reduced Motion */
+@media (prefers-reduced-motion: reduce) {
+  *, ::before, ::after {
+    animation: none !important;
+    transition: none !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* lebar layar penuh  */
+
+@media (min-width: 546px) {
+  .selamat {
+    display: none !important;
+  }
+
+}
+
+
+
+
+
+
+/* hp file index.php */
+
+@media (max-width: 546px) {
+
+  .hero {
+  position: relative;
+  overflow: hidden;
+  padding: 140px 0 80px;
+  min-height: clamp(520px, 80vh, 680px);
+  background: linear-gradient(135deg, var(--brand-dark), var(--bs-primary));
+  border-bottom-left-radius: 200px;
+  margin-bottom: 18px;
+}
+
+.hero-bg {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+}
+
+.hero-bg img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 60%;
+  display: block;
+}
+
+  .hero{
+    min-height: clamp(520px, 80vh, 300px);
+  }
+
+  .selamat{
+    margin-top: -200px;
+  }
+
+  .karakter {
+    display: none !important;
+  }
+  
+  .paragraf{
+    display: none !important;
+    
+  }
+  .btn-custom{
+    display: none !important;
+
+  }
+
+ /* ---------- EFEK MENGETIK LOOPING (KETIK - DIAN - HILANG) ---------- */
+.typing-text {
+  color: #F2D800;
+  display: inline-block;
+  overflow: hidden;
+  white-space: nowrap;
+  border-right: 3px solid var(--bs-warning); /* Garis kursor ketik */
+  vertical-align: bottom;
+  width: 0;
+  animation: 
+    ketikHapus 5s steps(6) infinite, /* Loop terus menerus setiap 5 detik */
+    kedip 0.75s step-end infinite;
+}
+
+/* Keyframe untuk mengetik, diam sejenak, lalu terhapus */
+@keyframes ketikHapus {
+  0% { 
+    width: 0; 
+  }
+  30%, 70% { 
+    width: 7.7ch; /* Kata "Global" muncul sempurna & diam sejenak */
+  }
+  100% { 
+    width: 0; /* Teks terhapus/hilang kembali */
+  }
+}
+
+/* Animasi kursor berkedip */
+@keyframes kedip {
+  from, to { border-color: transparent; }
+  50% { border-color: var(--bs-warning); }
+}
+
+}
+
+
+
+
+
+
+ /* ---------- EFEK MENGETIK LOOPING (KETIK - DIAN - HILANG) ---------- */
+.typing-text-1 {
+  color: #F2D800;
+  display: inline-block;
+  overflow: hidden;
+  white-space: nowrap;
+  border-right: 3px solid var(--bs-warning); /* Garis kursor ketik */
+  vertical-align: bottom;
+  width: 0;
+  animation: 
+    ketikHapuss 5s steps(6) infinite, /* Loop terus menerus setiap 5 detik */
+    kedip 0.75s step-end infinite;
+}
+
+/* Keyframe untuk mengetik, diam sejenak, lalu terhapus */
+@keyframes ketikHapuss {
+  0% { 
+    width: 0; 
+  }
+  30%, 70% { 
+    width: 5.2ch; /* Kata "Global" muncul sempurna & diam sejenak */
+  }
+  100% { 
+    width: 0; /* Teks terhapus/hilang kembali */
+  }
+}
+
+/* Animasi kursor berkedip */
+@keyframes kedip {
+  from, to { border-color: transparent; }
+  50% { border-color: var(--bs-warning); }
+}
+
+
+
+
+/* file guru */
+/* =====================================================================
+   KONSEP HALAMAN GURU BARU (DESAIN MODERN 3 KOLOM)
+   ===================================================================== */
+
+/* Hero Banner */
+
+/* Filter Tab Pills */
+.guru-filter-pills .btn-filter {
+  border: none;
+  color: #475569;
+  font-weight: 600;
+  font-size: 0.9rem;
+  transition: all 0.3s ease;
+}
+
+.guru-filter-pills .btn-filter.active,
+.guru-filter-pills .btn-filter:hover {
+  background-color: #007F3C;
+  color: #ffffff;
+}
+
+/* Kartu Profil Guru */
+.guru-card {
+  position: relative;
+  background: #ffffff;
+  border-radius: 16px;
+  padding: 24px 20px;
+  height: 100%;
+  border: 1px solid #e2e8f0;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.03);
+  transition: all 0.3s ease;
+  overflow: hidden;
+}
+
+/* Garis Akses Horizontal Hijau di Atas Kartu */
+.guru-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 5px;
+  background-color: #007F3C;
+}
+
+.guru-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 28px rgba(0, 127, 60, 0.12);
+  border-color: #a7f3d0;
+}
+
+/* Badge Jenjang */
+.guru-badge-tag {
+  display: inline-block;
+  background-color: #007F3C;
+  color: #ffffff;
+  font-weight: 700;
+  font-size: 0.78rem;
+  padding: 4px 12px;
+  border-radius: 50px;
+  margin-bottom: 14px;
+}
+
+
+/* Container Foto & Hover Overlay */
+.guru-img-container {
+  position: relative;
+  width: 100%;
+  height: 230px;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.guru-img-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: top center;
+  transition: transform 0.4s ease;
+}
+
+.guru-card:hover .guru-img-container img {
+  transform: scale(1.05);
+}
+
+/* Social Overlay saat Hover */
+.guru-social-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 127, 60, 0.65);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.guru-card:hover .guru-social-overlay {
+  opacity: 1;
+}
+
+.social-icon {
+  width: 40px;
+  height: 40px;
+  background: #ffffff;
+  color: #007F3C;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  font-size: 1.1rem;
+  transition: transform 0.2s ease;
+}
+
+.social-icon:hover {
+  transform: scale(1.15);
+  color: #005c2b;
+}
+
+/* Typography Kartu */
+.guru-name {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: #0f172a;
+}
+
+.guru-desc {
+  color: #64748b;
+  font-size: 0.88rem;
+  line-height: 1.5;
+  margin-bottom: 0;
+}

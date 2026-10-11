@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Guru &amp; Staf — Al-Yusdah</title>
+  <meta name="description" content="Guru & Staf Sekolah Terpadu Al-Yusdah.">
+  <meta name="theme-color" content="#007F3C">
+  <link rel="icon" href="gambar/favicon.png">
+
+  <!-- Font & Bootstrap Icons/CSS -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Poppins:wght@600;700&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+  <!-- Style Kustom -->
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+  <!-- ============ NAVBAR ============ -->
+  <header class="site-header-static border-bottom shadow-sm">
+    <nav class="navbar navbar-expand-lg navbar-custom">
+      <div class="container">
+        <a class="navbar-brand d-flex align-items-center gap-2 fw-bold" href="index.html">
+          <img src="gambar/logo-alyusdah.png" alt="Logo Al-Yusdah" width="53" height="48">
+          <span class="lh-sm span-custom">Al-Yusdah<small class="d-block fw-medium brand-sub">SD &amp; SMP Terpadu</small></span>
+        </a>
+
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navMenu">
+          <ul class="navbar-nav ms-auto align-items-lg-center gap-lg-1 pt-3 pt-lg-0">
+            <li class="nav-item"><a class="nav-link" href="index.html">Beranda</a></li>
+            
+            <!-- Dropdown Menu Profile -->
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="profileDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                Profile
+              </a>
+              <ul class="dropdown-menu border-0 shadow-sm" aria-labelledby="profileDropdown">
+                <li><a class="dropdown-item" href="sambutan.html">Sambutan</a></li>
+                <li><a class="dropdown-item" href="profil.html">Profil Sekolah</a></li>
+                <li><a class="dropdown-item" href="guru.html">Guru &amp; Staf</a></li>
+                <li><a class="dropdown-item" href="#eskul">Ekstrakurikuler</a></li>
+              </ul>
+            </li>
+
+            <li class="nav-item"><a class="nav-link" href="berita.html">Berita</a></li>
+            <li class="nav-item"><a class="nav-link" href="galery.html">Galery</a></li>
+            <li class="nav-item"><a class="nav-link" href="kontak.html">Kontak</a></li>
+            <li class="nav-item ms-lg-2 mt-2 mt-lg-0 pb-3 pb-lg-0"><a class="btn btn-warning w-100" href="#daftar">Pendaftaran</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+  
+
+    <!-- SECTION KONTEN GURU -->
+    <section class="py-5 bg-light">
+      <div class="container">
+
+        <!-- FILTER TAB MENU -->
+        <!-- <div class="d-flex justify-content-center mb-5">
+          <div class="guru-filter-pills p-1 bg-white rounded-pill border shadow-sm">
+            <button class="btn btn-filter active rounded-pill px-4" onclick="filterGuru('all')">Semua</button>
+            <button class="btn btn-filter rounded-pill px-4" onclick="filterGuru('sd')">SD Terpadu</button>
+            <button class="btn btn-filter rounded-pill px-4" onclick="filterGuru('smp')">SMP Terpadu</button>
+          </div>
+        </div> -->
+
+        <!-- GRID KARTU GURU (3 KOLOM) -->
+        <div class="row g-4">
+
+          <!-- Guru 1 -->
+          <div class="col-md-6 col-lg-4 guru-item sd">
+            <div class="guru-card">
+              <span class="guru-badge-tag">SD Terpadu</span>
+              <div class="guru-img-container mb-3">
+                <img src="gambar/guru-1.jpg" alt="Ahmad Fauzi, S.Pd.">
+                <div class="guru-social-overlay">
+                  <a href="#" class="social-icon"><i class="bi bi-envelope-fill"></i></a>
+                  <a href="#" class="social-icon"><i class="bi bi-linkedin"></i></a>
+                </div>
+              </div>
+              <div class="guru-card-body">
+                <h4 class="guru-name mb-1">Ahmad Fauzi, S.Pd.</h4>
+                <p class="text-success fw-semibold small mb-2">Guru Wali Kelas &amp; Tematik</p>
+                <p class="guru-desc">
+                  Berfokus pada pembentukan karakter dasar, kedisiplinan, serta semangat belajar siswa di jenjang pendidikan dasar.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Guru 2 -->
+          <div class="col-md-6 col-lg-4 guru-item smp">
+            <div class="guru-card">
+              <span class="guru-badge-tag bg-primary">SMP Terpadu</span>
+              <div class="guru-img-container mb-3">
+                <img src="gambar/guru-2.jpg" alt="Siti Rahma, M.Pd.">
+                <div class="guru-social-overlay">
+                  <a href="#" class="social-icon"><i class="bi bi-envelope-fill"></i></a>
+                  <a href="#" class="social-icon"><i class="bi bi-linkedin"></i></a>
+                </div>
+              </div>
+              <div class="guru-card-body">
+                <h4 class="guru-name mb-1">Siti Rahma, M.Pd.</h4>
+                <p class="text-primary fw-semibold small mb-2">Guru Matematika</p>
+                <p class="guru-desc">
+                  Membimbing siswa memahami konsep matematika secara logika, interaktif, dan menyenangkan untuk mengasah nalar kritis.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Guru 3 -->
+          <div class="col-md-6 col-lg-4 guru-item sd smp">
+            <div class="guru-card">
+              <span class="guru-badge-tag bg-dark">SD &amp; SMP</span>
+              <div class="guru-img-container mb-3">
+                <img src="gambar/guru-3.jpg" alt="Ustadz Ridwan, S.Ag.">
+                <div class="guru-social-overlay">
+                  <a href="#" class="social-icon"><i class="bi bi-envelope-fill"></i></a>
+                  <a href="#" class="social-icon"><i class="bi bi-linkedin"></i></a>
+                </div>
+              </div>
+              <div class="guru-card-body">
+                <h4 class="guru-name mb-1">Ustadz Ridwan, S.Ag.</h4>
+                <p class="text-success fw-semibold small mb-2">Guru Pendidikan Agama Islam</p>
+                <p class="guru-desc">
+                  Mendidik pembiasaan ibadah harian, hafalan Al-Qur'an (Tahfidz), serta pembinaan akhlakul karimah siswa.
+                </p>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="bg-brand-dark text-white pt-5 pb-3">
+    <div class="container text-center small opacity-75">
+      © <span id="year">2026</span> Sekolah Terpadu Al-Yusdah. All rights reserved.
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+
+  <!-- Script Sederhana Filter Guru -->
+  <script>
+    function filterGuru(category) {
+      const items = document.querySelectorAll('.guru-item');
+      const buttons = document.querySelectorAll('.btn-filter');
+
+      buttons.forEach(btn => btn.classList.remove('active'));
+      event.target.classList.add('active');
+
+      items.forEach(item => {
+        if (category === 'all' || item.classList.contains(category)) {
+          item.style.display = 'block';
+        } else {
+          item.style.display = 'none';
+        }
+      });
+    }
+  </script>
+</body>
+</html>
