@@ -689,7 +689,7 @@ h1, h2, h3, h4, h5, h6,
   position: relative;
   overflow: hidden;
   padding: 140px 0 80px;
-  min-height: clamp(520px, 80vh, 680px);
+  min-height: clamp(430px, 80vh, 200px) !important;
   background: linear-gradient(135deg, var(--brand-dark), var(--bs-primary));
   border-bottom-left-radius: 200px;
   margin-bottom: 18px;
@@ -714,7 +714,7 @@ h1, h2, h3, h4, h5, h6,
   }
 
   .selamat{
-    margin-top: -200px;
+    margin-top: -100px;
   }
 
   .karakter {
