@@ -681,7 +681,7 @@ h1, h2, h3, h4, h5, h6,
 
 
 
-/* hp file index.php */
+/* hp file index.html */
 
 @media (max-width: 546px) {
 
@@ -715,6 +715,10 @@ h1, h2, h3, h4, h5, h6,
 
   .selamat{
     margin-top: -100px;
+  }
+
+  .trust-badges{
+    margin-top: -25px;
   }
 
   .karakter {
